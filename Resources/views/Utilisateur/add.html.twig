@@ -1,0 +1,12 @@
+{% extends "::layout.html.twig" %}
+
+{% block title %}PlanningBundle:Utilisateur:add{% endblock %}
+
+{% block body %}
+	<h1>Welcome to the Utilisateur:add page</h1>
+
+	<form method="post">
+		{{ form_widget(form) }}
+		<input type="submit" />
+	</form>	
+{% endblock %}
