@@ -1,0 +1,5 @@
+planning:
+    resource: "@PlanningBundle/Controller/"
+    type:     annotation
+    prefix:   /
+
