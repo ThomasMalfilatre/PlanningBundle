@@ -17,6 +17,16 @@ class UtilisateurController extends Controller
         $users = new \Iut\PlanningBundle\Entity\Users();
         $form = $this -> createForm(new \Iut\PlanningBundle\Form\UsersType(), $users);
 
+        $request = $this -> get('request');
+        if($request->getMethod() == 'POST'){
+            $form->bind($request);
+            if($form->isValid()){
+                $e = $this->getDoctrine()->getManager();
+                $e -> persist($users);
+                $e -> flush(); 
+            }
+        }
+
         return $this -> render('PlanningBundle:Utilisateur:add.html.twig', array('form' => $form->createView()));
     }
 
