@@ -13,11 +13,11 @@ class UtilisateurController extends Controller
      * @Template()
      */
     public function addAction(){
-        $users = new \Iut\PlanningBundle\Entity\Users();
 
+        $users = new \Iut\PlanningBundle\Entity\Users();
         $form = $this -> createForm(new \Iut\PlanningBundle\Form\UsersType(), $users);
 
-        return $this -> render('PlanningBundle:Utilisateur:add.html.twig');
+        return $this -> render('PlanningBundle:Utilisateur:add.html.twig', array('form' => $form->createView()));
     }
 
     /**
