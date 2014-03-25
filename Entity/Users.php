@@ -33,7 +33,7 @@ class Users
      *
      * @ORM\Column(name="Prénom", type="string", length=30)
      */
-    private $prénom;
+    private $prenom;
 
     /**
      * @var string
@@ -89,9 +89,9 @@ class Users
      * @param string $prénom
      * @return Users
      */
-    public function setPrénom($prénom)
+    public function setPrenom($prenom)
     {
-        $this->prénom = $prénom;
+        $this->prénom = $prenom;
 
         return $this;
     }
@@ -101,9 +101,9 @@ class Users
      *
      * @return string 
      */
-    public function getPrénom()
+    public function getPrenom()
     {
-        return $this->prénom;
+        return $this->prenom;
     }
 
     /**
