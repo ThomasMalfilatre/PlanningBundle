@@ -35,6 +35,12 @@ class DateActivity
      */
     private $activite;
 
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="pseudo", type="string", length=30)
+     */
+    private $pseudo;
 
     /**
      * Get id
@@ -90,5 +96,28 @@ class DateActivity
     public function getActivite()
     {
         return $this->activite;
+    }
+
+    /**
+     * Set pseudo
+     *
+     * @param string $pseudo
+     * @return DateActivity
+     */
+    public function setPseudo($pseudo)
+    {
+        $this->pseudo = $pseudo;
+
+        return $this;
+    }
+
+    /**
+     * Get pseudo
+     *
+     * @return string 
+     */
+    public function getPseudo()
+    {
+        return $this->pseudo;
     }
 }
